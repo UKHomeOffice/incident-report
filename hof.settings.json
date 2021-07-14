@@ -1,0 +1,9 @@
+{
+  "theme": "govuk",
+  "routes": [
+    "./apps/incident-report"
+  ],
+  "session": {
+    "name": "incident-report.hof.sid"
+  }
+}
