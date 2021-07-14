@@ -8,7 +8,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete', require('hof-behaviour-summary-page')],
+      behaviours: [require('./behaviours/create-incident'), require('hof-behaviour-summary-page')],
       next: '/complete'
     },
     '/complete': {
