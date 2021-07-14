@@ -2,10 +2,9 @@
 
 module.exports = {
   name: 'incident-report',
-  baseUrl: '/incident-report',
   steps: {
-    '/name': {
-      fields: ['name'],
+    '/describe': {
+      fields: ['describe'],
       next: '/confirm'
     },
     '/confirm': {

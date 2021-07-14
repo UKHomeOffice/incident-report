@@ -1,5 +1,4 @@
 'use strict';
-
 const hof = require('hof');
 
 const settings = require('./hof.settings');

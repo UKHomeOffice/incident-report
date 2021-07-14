@@ -1,5 +1,5 @@
 {
-  "name": {
-    "header": "Personal details"
+  "describe": {
+    "header": "Describe the incident or accident"
   }
 }
