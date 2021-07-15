@@ -3,6 +3,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "hof-build watch",
+    "devenv": "hof-build watch --env",
     "debug": "node --inspect app.js",
     "test": "npm run test:lint",
     "migrate": "npx knex migrate:latest",
@@ -18,6 +19,7 @@
     "hof-build": "^1.3.4",
     "hof-theme-govuk": "^5.2.4",
     "knex": "^0.95.7",
+    "notifications-node-client": "^5.1.0",
     "pg": "^8.6.0",
     "short-uuid": "^4.2.0"
   },

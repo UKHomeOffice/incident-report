@@ -1,0 +1,8 @@
+{
+  "incident": {
+    "header": "Describe the incident or accident"
+  },
+  "user": {
+    "header": "Enter your details"
+  }
+}
