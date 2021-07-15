@@ -3,7 +3,11 @@
   "scripts": {
     "start": "node app.js",
     "dev": "hof-build watch",
+    "debug": "node --inspect app.js",
     "test": "npm run test:lint",
+    "migrate": "npx knex migrate:latest",
+    "rollback": "npx knex migrate:rollback",
+    "seed": "npx knex seed:run",
     "test:lint": "eslint .",
     "build": "hof-build",
     "postinstall": "npm run build"
@@ -12,7 +16,10 @@
     "hof": "^18.3.0",
     "hof-behaviour-summary-page": "^2.0.0",
     "hof-build": "^1.3.4",
-    "hof-theme-govuk": "^5.2.4"
+    "hof-theme-govuk": "^5.2.4",
+    "knex": "^0.95.7",
+    "pg": "^8.6.0",
+    "short-uuid": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^3.14.0",
@@ -23,5 +30,5 @@
   "version": "1.0.0",
   "main": "index.js",
   "keywords": [],
-  "author": ""
+  "author": "sulthan ahmed"
 }

@@ -1,5 +1,11 @@
 {
-  "name": {
-    "label": "Name"
+  "incident": {
+    "label": "incident"
+  },
+  "user-email": {
+    "label": "your email"
+  },
+  "manager-email": {
+    "label": "manager's email"
   }
 }

@@ -1,7 +1,13 @@
 'use strict';
 
 module.exports = {
-  name: {
+  incident: {
+    validate: 'required'
+  },
+  'user-email': {
+    validate: 'required'
+  },
+  'manager-email': {
     validate: 'required'
   }
 };
