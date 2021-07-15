@@ -3,17 +3,16 @@
 
 const config = require('../../../knexfile')[process.env.NODE_ENV || 'development'];
 const knex = require('knex')(config);
-
+const uuid = require('short-uuid');
 
 const createIncident = async(data) => {
   try {
     await knex('incidents').insert({
-      id: data['user-id'],
+      id: uuid.generate(),
       incident: data.incident,
       user_email: data['user-email'],
       manager_email: data['manager-email']
     })
-    console.log(`=====> record ${data['user-id']} saved to incidents_report db`)
   } catch(err) {
     console.error(err);
   }

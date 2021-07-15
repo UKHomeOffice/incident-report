@@ -1,4 +1,7 @@
 'use strict';
+const create = require('./behaviours/create-incident');
+const summary = require('hof-behaviour-summary-page');
+const sendEmail = require('./behaviours/send-email');
 
 module.exports = {
   name: 'incident-report',
@@ -12,7 +15,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [require('./behaviours/create-incident'), require('hof-behaviour-summary-page')],
+      behaviours: [create, summary, sendEmail],
       next: '/complete'
     },
     '/complete': {
