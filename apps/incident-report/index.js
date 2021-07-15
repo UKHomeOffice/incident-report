@@ -3,8 +3,12 @@
 module.exports = {
   name: 'incident-report',
   steps: {
-    '/describe': {
-      fields: ['describe'],
+    '/incident': {
+      fields: ['incident'],
+      next: '/user'
+    },
+    '/user': {
+      fields: ['user-email', 'manager-email'],
       next: '/confirm'
     },
     '/confirm': {

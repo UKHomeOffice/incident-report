@@ -1,27 +1,21 @@
+/* eslint-disable no-process-env, camelcase, no-console */
 'use strict';
-/* eslint-disable no-process-env, camelcase */
 
 const config = require('../../../knexfile')[process.env.NODE_ENV || 'development'];
 const knex = require('knex')(config);
 const uuid = require('short-uuid');
 
-const createIncident = () => {
-  console.log('...........crud');  
-  console.log(uuid.generate());  
-  // knex('incidents').insert({
-  //   id: 3,
-  //   incident: 'tickled funny bone',
-  //   user_email: 'sulthan.ahmed@digital.homeoffice.gov.uk',
-  //   manager_email: 'test2@test.com'
-  // });
-  knex('incidents').insert({
-    id: uuid.generate(),
-    incident: 'blah',
-    user_email: 'sulthan@gmail.com',
-    manager_email: 'sulthan@gmail.com'
-  })
-    .then(() => {})
-    .catch((err) => console.error(err));
+const createIncident = async(data) => {
+  try {
+    await knex('incidents').insert({
+      id: uuid.generate(),
+      incident: data.incident,
+      user_email: data['user-email'],
+      manager_email: data['manager-email']
+    })
+  } catch(err) {
+    console.error(err);
+  }
 };
 
 module.exports = {

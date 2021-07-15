@@ -3,6 +3,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "hof-build watch",
+    "debug": "node --inspect app.js",
     "test": "npm run test:lint",
     "migrate": "npx knex migrate:latest",
     "rollback": "npx knex migrate:rollback",
