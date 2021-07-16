@@ -1,11 +1,13 @@
 'use strict';
+const getIncident = require('./behaviours/get-incident');
 
 module.exports = {
   name: 'incident-review',
   baseUrl: '/incident-review',
   steps: {
-    '/incident': {
-      fields: ['incident'],
+    '/manager': {
+      fields: ['manager-comments'],
+      behaviours: [getIncident],
       next: '/confirm'
     },
     '/confirm': {

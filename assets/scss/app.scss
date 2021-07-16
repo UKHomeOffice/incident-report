@@ -1,5 +1,7 @@
 @import "$$theme";
+@import "node_modules/govuk-frontend/govuk/all";
 
 .phase-banner {
   @include phase-banner(beta);
 }
+

@@ -1,0 +1,33 @@
+{{<partials-page}}
+{{$page-content}}
+  <table class="table-details">
+    <tbody>
+      <tr>
+        <th class="govuk-!-font-weight-bold">Reference</th>
+        <td class="no-white-space">
+          {{values.incident-record.id}}
+        </td>
+      </tr>
+      <tr>
+        <th class="govuk-!-font-weight-bold">Incident</th>
+        <td class="no-white-space">
+          {{values.incident-record.incident}}
+        </td>
+      </tr>
+      <tr>
+        <th class="govuk-!-font-weight-bold">employee's email</th>
+        <td class="no-white-space">
+          {{values.incident-record.user_email}}
+        </td>
+      </tr>
+      <tr>
+        <th class="govuk-!-font-weight-bold">line manager's email</th>
+        <td class="no-white-space">
+          {{values.incident-record.manager_email}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  {{#input-submit}}send-report{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

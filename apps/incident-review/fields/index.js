@@ -1,13 +1,8 @@
 'use strict';
 
 module.exports = {
-  incident: {
-    validate: 'required'
-  },
-  'user-email': {
-    validate: 'required'
-  },
-  'manager-email': {
+  'manager-comments': {
+    mixin: 'textarea',
     validate: 'required'
   }
 };

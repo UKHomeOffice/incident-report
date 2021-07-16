@@ -3,23 +3,18 @@
 
 const config = require('../../../knexfile')[process.env.NODE_ENV || 'development'];
 const knex = require('knex')(config);
-const uuid = require('short-uuid');
 
-const createIncident = async(data) => {
+const getAll = async(id) => {
   try {
-    await knex('incidents').insert({
-      id: uuid.generate(),
-      incident: data.incident,
-      user_email: data['user-email'],
-      manager_email: data['manager-email']
-    })
+    return await knex('incidents')
+      .select().where('id', id);
   } catch(err) {
     console.error(err);
   }
 };
 
 module.exports = {
-  createIncident
+  getAll
 };
 
 //   return knex('incidents').insert([

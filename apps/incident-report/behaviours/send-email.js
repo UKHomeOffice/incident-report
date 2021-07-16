@@ -6,7 +6,7 @@ const NotifyClient = require('notifications-node-client').NotifyClient;
 const notifyClient = new NotifyClient(notifyApiKey);
 const templateId = config.govukNotify.managerTemplateId;
 const appPath = require('../../incident-review').baseUrl;
-const firstStep = '/incident';
+const firstStep = '/manager';
 
 const getPersonalisation = (host, token) => {
   return {
@@ -34,7 +34,7 @@ module.exports = superclass => class extends superclass {
 
   saveValues(req, res, callback) {
     super.saveValues(req, res, err => {
-      const email = req.sessionModel.attributes['user-email'];
+      const email = req.sessionModel.attributes['manager-email'];
 
       const host = req.get('host');
       const token = req.sessionModel.attributes['user-id'];
