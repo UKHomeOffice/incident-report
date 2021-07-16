@@ -2,10 +2,11 @@
   "theme": "govuk",
   "routes": [
     "./apps/incident-report",
-    "./apps/incident-review"
+    "./apps/incident-review",
+    "./apps/admin"
   ],
   "session": {
     "name": "incident-report.hof.sid"
   },
-  "port": 3000
+  "port": 4000
 }
