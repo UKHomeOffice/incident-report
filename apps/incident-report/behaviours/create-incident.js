@@ -7,9 +7,9 @@ module.exports = superclass => class extends superclass {
   async saveValues (req, res, next) {
     try {
       // so we can use this when we send it gov-notify
-      req.sessionModel.set('user-id', uuid.generate())
+      req.sessionModel.set('incident-id', uuid.generate())
       await db.createIncident({
-        'user-id': req.sessionModel.attributes['user-id'],
+        'incident-id': req.sessionModel.attributes['incident-id'],
         incident: req.sessionModel.attributes.incident,
         'user-email': req.sessionModel.attributes['user-email'],
         'manager-email': req.sessionModel.attributes['manager-email'],

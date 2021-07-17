@@ -7,5 +7,8 @@
   },
   "manager-email": {
     "label": "manager's email"
+  },
+  "manager-comments": {
+    "label": "manager's comments"
   }
 }

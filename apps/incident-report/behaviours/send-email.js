@@ -37,7 +37,7 @@ module.exports = superclass => class extends superclass {
       const email = req.sessionModel.attributes['manager-email'];
 
       const host = req.get('host');
-      const token = req.sessionModel.attributes['user-id'];
+      const token = req.sessionModel.attributes['incident-id'];
       sendEmail(email, host, token);
       return callback(err);
     });

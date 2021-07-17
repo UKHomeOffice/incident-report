@@ -4,7 +4,7 @@
 const config = require('../../../knexfile')[process.env.NODE_ENV || 'development'];
 const knex = require('knex')(config);
 
-const getAll = async(id) => {
+const get = async(id) => {
   try {
     return await knex('incidents')
       .select().where('id', id);
@@ -14,7 +14,7 @@ const getAll = async(id) => {
 };
 
 module.exports = {
-  getAll
+  get
 };
 
 //   return knex('incidents').insert([
