@@ -1,6 +1,6 @@
 'use strict';
 const getAllIncidents = require('./behaviours/get-all-incidents');
-const fullWidth = require('./behaviours/full-width');
+const fullWidth = require('../common/behaviour/full-width');
 
 module.exports = {
   name: 'admin',

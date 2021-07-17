@@ -1,5 +1,6 @@
 {{<partials-page}}
 {{$page-content}}
+  <h1>Reports</h1>
   {{#fields}}
     {{#renderField}}{{/renderField}}
   {{/fields}}
@@ -22,7 +23,7 @@
               <td class="govuk-table__cell">{{updatedAt}}</td>
               <td class="govuk-table__cell">
                 <button name="resume" value="{{id}}" class="govuk-button reports-button">Go to report</button>&nbsp;
-                <button class="govuk-button govuk-button--secondary reports-button" name="delete" value="{{id}}">Delete report</button>
+                <button class="govuk-button govuk-button--secondary reports-button" name="delete" value="{{id}}">Delete</button>
               </td>
             </tr>
           {{/previousReports}}
@@ -33,9 +34,6 @@
           {{/previousReports}}
         </tbody>
       </table>
-      <h2>Create a new report</h2>
-      <p>Create your report to notify the Home Office</p>
-      {{#input-submit}}create-report{{/input-submit}}
     </div>
   </div>
 {{/page-content}}

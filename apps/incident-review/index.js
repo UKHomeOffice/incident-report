@@ -1,13 +1,21 @@
 'use strict';
-const getIncident = require('./behaviours/get-incident');
+const checkTokenGetIncident = require('./behaviours/check-token-get-incident');
+const fullWidth = require('../common/behaviour/full-width');
 
 module.exports = {
   name: 'incident-review',
   baseUrl: '/incident-review',
+  pages: {
+    '/token-invalid': 'token-invalid'
+  },
   steps: {
+    '/start':{
+      behaviours: [checkTokenGetIncident],
+      next: '/manager'
+    },
     '/manager': {
       fields: ['manager-comments'],
-      behaviours: [getIncident],
+      behaviours: [fullWidth],
       next: '/confirm'
     },
     '/confirm': {

@@ -6,7 +6,7 @@ const NotifyClient = require('notifications-node-client').NotifyClient;
 const notifyClient = new NotifyClient(notifyApiKey);
 const templateId = config.govukNotify.managerTemplateId;
 const appPath = require('../../incident-review').baseUrl;
-const firstStep = '/manager';
+const firstStep = '/start';
 
 const getPersonalisation = (host, token) => {
   return {

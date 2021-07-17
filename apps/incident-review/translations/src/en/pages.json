@@ -1,8 +1,9 @@
 {
-  "incident": {
-    "header": "Describe the incident or accident"
+  "start": {
+    "header": "Continue to your report",
+    "intro": "We just need to check your security access"
   },
-  "user": {
-    "header": "Enter your details"
+  "manager": {
+    "header": "Review the incident of the employee"
   }
 }
