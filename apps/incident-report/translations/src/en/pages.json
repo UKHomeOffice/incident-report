@@ -1,4 +1,10 @@
 {
+  "when": {
+    "header": "When did the incident happen?"
+  },
+  "where": {
+    "header": "Where did the incident happen?"
+  },
   "incident": {
     "header": "Describe the incident or accident"
   },
