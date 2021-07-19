@@ -8,6 +8,10 @@ module.exports = {
   steps: {
     '/reports': {
       behaviours: [getAllIncidents, fullWidth],
+      next: '/show-report'
+    },
+    '/show-report': {
+      behaviours: [],
       next: '/confirm'
     },
     '/confirm': {
