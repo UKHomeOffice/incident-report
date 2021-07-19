@@ -14,6 +14,10 @@ module.exports = {
       behaviours: [],
       next: '/confirm'
     },
+    '/incident': {
+      fields: ['incident'],
+      next: '/show-report'
+    },
     '/confirm': {
       behaviours: [],
       next: '/complete'

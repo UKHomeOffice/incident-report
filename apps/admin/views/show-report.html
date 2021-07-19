@@ -13,6 +13,9 @@
         <td class="no-white-space">
           {{values.incident-record.incident}}
         </td>
+        <td>
+          <a href="/admin/incident/{{#hideChangeLink}}change{{/hideChangeLink}}{{^hideChangeLink}}edit{{/hideChangeLink}}" class="button" aria-label="Change incident">Change</a>
+        </td>
       </tr>
       <tr>
         <th class="govuk-!-font-weight-bold">employee's email</th>

@@ -30,15 +30,20 @@ const sendEmail = (email, host, token) => {
     });
 };
 
+const getSessionValues = (attribute) => {
+  
+}
+
 module.exports = superclass => class extends superclass {
 
   saveValues(req, res, callback) {
     super.saveValues(req, res, err => {
-      const email = req.sessionModel.attributes['manager-email'];
+      console.log('session ====>', req.sessionModel.toJSON())
 
+      const email = req.sessionModel.attributes['manager-email'];
       const host = req.get('host');
       const token = req.sessionModel.attributes['incident-id'];
-      sendEmail(email, host, token);
+      // sendEmail(email, host, token);
       return callback(err);
     });
   }

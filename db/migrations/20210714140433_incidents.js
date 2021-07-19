@@ -7,6 +7,7 @@ exports.up = (knex) => {
     table.string('user_email').notNullable();
     table.string('manager_email').notNullable();
     table.string('manager_comments');
+    table.string('session');
     table.boolean('complete').notNullable().defaultTo(false);
     table.timestamps(true, true);
   });
