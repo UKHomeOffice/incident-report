@@ -1,11 +1,24 @@
 {
+  "date": {
+    "legend": "Date",
+    "hint": "For example, 10 3 2016"
+  },
+  "location": {
+    "label": "Location"
+  },
+  "first-name": {
+    "label": "First name"
+  },
+  "last-name": {
+    "label": "Last name"
+  },
   "incident": {
-    "label": "incident"
+    "label": "Incident"
   },
   "user-email": {
-    "label": "your email"
+    "label": "Your email"
   },
   "manager-email": {
-    "label": "manager's email"
+    "label": "Manager's email"
   }
 }

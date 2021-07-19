@@ -7,9 +7,9 @@ exports.seed = (knex) => {
     .then(() => {
       // Inserts seed entries
       return knex('incidents').insert([
-        { id: 1, incident: 'fell on a banana', user_email: 'sulthan.ahmed@digital.homeoffice.gov.uk',
-        manager_email: 'test1@test.com'},
-        { id: 2, incident: 'someone took my chair as I was sitting', user_email: 'test3@test.com',
+        { id: 'nxmP3FfGrqgBonoJ8kHyuT', incident: 'fell on a banana', location: 'london', date: '1/1/2021', first_name:'Ayesha', last_name: 'Choudhary', user_email: 'ayeshadigital.homeoffice.gov.uk',
+        manager_email: 'sulthan.ahmed@digital.homeoffice.gov.uk'},
+        { id: 'rba8R45GmcCPogCRykBhhb', incident: 'cat bit me', location: 'manchester', date: '1/1/2021', first_name:'Mo', last_name: 'Ali', user_email: 'test3@test.com',
         manager_email: 'sulthan.ahmed@digital.homeoffice.gov.uk'}
       ]);
     });

@@ -1,5 +1,5 @@
 'use strict';
-const db = require('../models/read-incidents');
+const db = require('../../common/models/db-query');
 const _ = require('lodash');
 const moment = require('moment');
 
@@ -33,6 +33,8 @@ module.exports = superclass => class extends superclass {
 
           let rep = {
             reference: report.id,
+            firstName: report.first_name,
+            lastName: report.last_name,
             updatedAt: moment(report.updated_at).format('DD MMMM YYYY'),
             progress: report.complete,
             email: report.user_email,
