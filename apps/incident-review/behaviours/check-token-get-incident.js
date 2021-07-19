@@ -1,5 +1,5 @@
 'use strict';
-const db = require('../models/read-incident');
+const db = require('../../common/models/db-query');
 
 module.exports = superclass => class extends superclass {
   async saveValues(req, res, callback) {

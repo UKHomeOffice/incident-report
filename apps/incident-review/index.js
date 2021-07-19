@@ -1,5 +1,6 @@
 'use strict';
 const checkTokenGetIncident = require('./behaviours/check-token-get-incident');
+const update = require('./behaviours/update-incident');
 const fullWidth = require('../common/behaviour/full-width');
 
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [require('hof-behaviour-summary-page')],
+      behaviours: [require('hof-behaviour-summary-page'), update],
       next: '/complete'
     },
     '/complete': {

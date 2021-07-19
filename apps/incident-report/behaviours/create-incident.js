@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 'use strict';
-const db = require('../models/crud-incident');
+const db = require('../../common/models/db-query');
 const uuid = require('short-uuid');
 
 module.exports = superclass => class extends superclass {

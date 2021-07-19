@@ -1,5 +1,5 @@
 'use strict';
-const db = require('../models/read-incidents');
+const db = require('../../common/models/db-query');
 const _ = require('lodash');
 const moment = require('moment');
 
