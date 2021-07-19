@@ -8,12 +8,12 @@ const knex = require('knex')(config);
 const createIncident = async(data) => {
   try {
     await knex('incidents').insert({
-      id: data['user-id'],
+      id: data['incident-id'],
       incident: data.incident,
       user_email: data['user-email'],
       manager_email: data['manager-email']
     })
-    console.log(`=====> record ${data['user-id']} saved to incidents_report db`)
+    console.log(`=====> record ${data['incident-id']} saved to incidents_report db`)
   } catch(err) {
     console.error(err);
   }

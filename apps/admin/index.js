@@ -1,6 +1,6 @@
 'use strict';
 const getAllIncidents = require('./behaviours/get-all-incidents');
-const fullWidth = require('./behaviours/full-width');
+const fullWidth = require('../common/behaviour/full-width');
 
 module.exports = {
   name: 'admin',
@@ -8,6 +8,10 @@ module.exports = {
   steps: {
     '/reports': {
       behaviours: [getAllIncidents, fullWidth],
+      next: '/show-report'
+    },
+    '/show-report': {
+      behaviours: [],
       next: '/confirm'
     },
     '/confirm': {

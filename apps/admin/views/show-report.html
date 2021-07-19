@@ -26,11 +26,32 @@
           {{values.incident-record.manager_email}}
         </td>
       </tr>
+      <tr>
+        <th class="govuk-!-font-weight-bold">Manager comments</th>
+        <td class="no-white-space">
+          {{#values.incident-record.manager_comments}}
+            {{values.incident-record.manager_comments}}
+          {{/values.incident-record.manager_comments}}
+          {{^values.incident-record.manager_comments}}
+            Empty
+          {{/values.incident-record.manager_comments}}
+        </td>
+      </tr>
+      <tr>
+        <th class="govuk-!-font-weight-bold">Status</th>
+        <td class="no-white-space">
+          {{#values.incident-record.complete}}
+            Complete
+          {{/values.incident-record.complete}}
+          {{^values.incident-record.complete}}
+            In progress
+          {{/values.incident-record.complete}}
+        </td>
+      </tr>
     </tbody>
   </table>
   {{#fields}}
     {{#renderField}}{{/renderField}}
   {{/fields}}
-  {{#input-submit}}continue{{/input-submit}}
 {{/page-content}}
 {{/partials-page}}
